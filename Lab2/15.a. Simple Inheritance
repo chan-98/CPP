@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+class DNA {
+public:
+    DNA()
+    {
+        cout << "TACATGGACATTAGG" << endl;
+    }
+
+};
+class RNA : public DNA {
+public:
+    RNA()
+    {
+        cout << "AUGUACCUGUAAUCC" << endl;
+    }
+};
+
+int main()
+{
+    RNA r;
+
+    return 0;
+}
