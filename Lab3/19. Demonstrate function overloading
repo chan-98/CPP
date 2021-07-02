@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+void name(string first_name, string last_name) {
+    cout << "Welcome " << first_name << " " << last_name << endl;
+}
+void name(string first_name) {
+    cout << "Hello " << first_name << endl;
+}
+int main()
+{
+    string f_name, l_name;
+    cout << "Enter your first and last name: \n";
+    cin >> f_name >> l_name;
+    name(f_name, l_name);
+    name(f_name);
+
+    return 0;
+}
