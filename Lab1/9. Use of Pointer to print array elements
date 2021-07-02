@@ -1,0 +1,45 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    /* Declaring the variables */
+
+    int* myPointVar;
+    int n;
+    int arr[100];
+
+
+    /* Taking user input of the array */
+
+    cout << "Enter size of the array" << "\n";
+    cin >> n;
+    cout << "Enter the array" << "\n";
+    for (int i = 0; i < n; i++)
+    {
+        cout << "Enter the array element " << i + 1 << ": " << endl;
+        cin >> arr[i];
+    }
+
+
+    /* Storing address of the array at my Pointer variable */
+
+    myPointVar = arr;
+    //stores the address of the very first element of the array arr[]
+    cout << "The address of the array stored at myPointVar is: " << myPointVar << endl;
+
+
+    /* Printing the array using Pointer variable */
+
+    cout << "The array is: " << endl;
+    for (int i = 0; i < n; i++)
+    {
+        cout << *(myPointVar + i) << " ";
+        
+        //myPointVar+i gives address of the value at i-th position from the myPointVar
+        //*(myPointVar + i) prints the value stored at these addresses – the elements of the array
+        
+    }
+
+    return 0;
+}
