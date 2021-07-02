@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+class peptide {
+public:
+    string seq;
+    int seq_length;
+    peptide()
+    {
+        seq = "Met-Tyr-Leu";
+        seq_length = 3;
+    }
+    void show_pep()
+    {
+        cout << "Peptide Seq : " << seq << endl;
+        cout << "Peptide seq Length : " << seq_length << endl;
+    }
+    ~peptide()
+    {
+        cout << "\n\tThe class peptide has been cleared." << endl;
+    }
+};
+int main()
+{
+    peptide pep1;
+    pep1.show_pep();
+    return 0;
+}
