@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-// To reverse the string, use the built-in function:
+// To reverse the string, use the built-in function: 
 // str2 = string(str1.rbegin(), str1.rend());
 
 using namespace std;
