@@ -1,0 +1,39 @@
+#include <iostream>
+
+using namespace std;
+
+class DNA {
+public:
+    DNA()
+    {
+        cout << "TACATGGACATTAGG" << endl;
+    }
+
+};
+class RNA : public DNA {
+public:
+    RNA()
+    {
+        cout << "AUGUACCUGUAAUCC" << endl;
+    }
+};
+class MRNA : public RNA {
+public:
+    MRNA()
+    {
+        cout << "AUGUACCUGUAA" << endl;
+    }
+};
+class PepSeq : public MRNA {
+public:
+    PepSeq()
+    {
+        cout << "Met-Tyr-Leu" << endl;
+    }
+};
+int main()
+{
+    PepSeq peptide;
+
+    return 0;
+}
