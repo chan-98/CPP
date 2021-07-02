@@ -1,0 +1,23 @@
+#include <iostream>
+#include <string>
+#include <algorithm>
+using namespace std;
+
+class Human {
+public:
+    string name;
+    int age;
+    // Constructor
+    Human(string name, int age) {
+        this->name = name;
+        this->age = age;
+        cout << this->name << " is " << this->age << " years old.\n";
+    }
+};
+int main()
+{
+
+    Human("Chandini", 23);
+
+    return 0;
+}
