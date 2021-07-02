@@ -1,0 +1,26 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Classroom {
+public:
+    string name;
+    int rollNo;
+    void printstudent()
+    {
+        cout << "Name: " << name << endl;
+        cout << "Roll No.: " << rollNo;
+    }
+};
+int main()
+{
+    Classroom cbio;
+
+    cout << "Enter your name: " << endl;
+        getline(cin, cbio.name);
+    cout << "Enter your ID: " << endl;
+        cin >> cbio.rollNo;
+    cbio.printstudent();
+
+    return 0;
+}
