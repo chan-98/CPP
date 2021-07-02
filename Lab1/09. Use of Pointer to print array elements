@@ -24,7 +24,7 @@ int main()
 
     /* Storing address of the array at my Pointer variable */
 
-    myPointVar = arr;
+    myPointVar = arr; 
     //stores the address of the very first element of the array arr[]
     cout << "The address of the array stored at myPointVar is: " << myPointVar << endl;
 
