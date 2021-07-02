@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+class ClassOne {
+public:
+    ClassOne()
+    {
+        cout << "Public ClassOne has been created. \n" << endl;
+    }
+
+};
+class ClassTwo : public ClassOne {
+public:
+    ClassTwo()
+    {
+        cout << "Public ClassTwo has been created. \n" << endl;
+    }
+};
+class ClassThree : public ClassTwo {
+public:
+    ClassThree()
+    {
+        cout << "Public ClassThree has been created. \n" << endl;
+    }
+};
+
+int main()
+{
+    ClassThree multipleInheritance;
+
+    return 0;
+}
