@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int age = 22;
+
+    // declare pointer variable
+    int* myPointer;
+
+    // store address of age
+    myPointer = &age;
+
+    // print value of age
+    cout << "Your age is: age = " << age << endl;
+
+    // print address of age
+    cout << "Address of age variable is: &age = " << &age << endl;
+ 
+    // print pointer myPointer
+    cout << "Your pointer variaible is: (myPointer) = " << myPointer << endl;
+
+    // print the content of the address myPointer points to
+    cout << "Content of the address pointed to by your pointer variable: *myPointer = " << *myPointer << endl;
+
+    // change the value at address myPointer (changing the value of age)
+    *myPointer = 23;
+
+    // print the new value using *myPointer
+    cout << "The value after changing the address *myPointer is: " << *myPointer << endl;
+
+    // print the new value using age
+    cout << "Congrats! You are " << age << " years old!" << endl;
+
+    return 0;
+}
