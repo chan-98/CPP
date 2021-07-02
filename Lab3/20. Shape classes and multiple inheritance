@@ -1,0 +1,77 @@
+#include <iostream>
+#include <string>
+#include <algorithm>
+using namespace std;
+
+class shape {
+public:
+    int length, width, height;
+};
+class square : public shape {
+public:
+    int area(int length)
+    {
+        int ar = length * length;
+        return ar;
+    }
+public:
+    void display(int ar)
+    {
+        cout << "Area of square :" << ar << endl;
+    }
+};
+class cube : public shape {
+public:
+    int area(int length)
+    {
+        int ar = (6 * length * length);
+        return ar;
+    }
+public:
+    void display(int ar)
+    {
+        cout << "Area of cube :" << ar << endl;
+    }
+};
+class rectangle : public shape {
+public:
+    int area(int length, int width)
+    {
+        int ar = length * width;
+        return ar;
+    }
+public:
+    void display(int ar)
+    {
+        cout << "Area of rectangle: " << ar << endl;
+    }
+};
+class triangle : public shape {
+public:
+    int area(int length, int height)
+    {
+        float ar = (0.5 * length * height);
+        return ar;
+    }
+public:
+    void display(int ar)
+    {
+        cout << "Area of triangle: " << ar << endl;
+    }
+};
+int main()
+{
+    square shape1;
+    cube shape2;
+    rectangle shape3;
+    triangle shape4;
+
+    int x = 7, y = 4, z = 8;
+
+    shape1.display(shape1.area(x));
+    shape2.display(shape2.area(z));
+    shape3.display(shape3.area(x, y));
+    shape4.display(shape4.area(z, x));
+
+    return 0;
+}
