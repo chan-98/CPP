@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+
+class CLASSONE
+{
+protected:
+    int x, y;
+public:
+    CLASSONE()
+    {
+        x = 500, y = 6000;
+    }
+};
+class CLASSTWO
+{
+protected:
+    string z;
+public:
+    CLASSTWO()
+    {
+        z = "Rs. ";
+    }
+};
+class CLASSTHREE : public CLASSONE, public CLASSTWO
+{
+public:
+    void display()
+    {
+        cout << "Your balance is " << CLASSTWO::z << CLASSONE::y - CLASSONE::x << endl;
+    }
+};
+int main()
+{
+    CLASSTHREE balance;
+    balance.display();
+    return 0;
+}
