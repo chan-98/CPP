@@ -1,0 +1,32 @@
+#include <iostream>
+#include <string>
+#include <algorithm>
+using namespace std;
+
+void meals(string breakfast, string lunch, string dinner) {
+    cout << breakfast << ", " << lunch << " and " << dinner << ", \n";
+};
+
+void meals(string brunch, string dinner) {
+    cout << brunch << " and " << dinner << " only.\n";
+};
+
+int main()
+{
+    string brekkie, lun, supper;
+    cout << "What did you have for breakfast? \n";
+    getline(cin, brekkie);
+    cout << "What did you have for lunch? \n";
+    getline(cin, lun);
+    cout << "What did you have for dinner? \n";
+    getline(cin, supper);
+
+    cout << "Yesterday you had: ";
+    meals(brekkie, lun, supper);
+
+    cout << "Today you had ";
+    meals(brekkie, supper);
+
+
+    return 0;
+}
