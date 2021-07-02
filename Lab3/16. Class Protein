@@ -1,0 +1,58 @@
+#include <iostream>
+#include <string>
+#include <algorithm>
+using namespace std;
+
+class Protein {
+public:
+    string name, organism, function;
+    int length;
+
+
+    void getname() {
+        getline(cin, name);
+    }
+
+
+    void getlength() {
+        cin >> length;
+        cin.ignore();
+        //makes sure the next getline isn't skipped.
+    }
+
+
+    void getorganism() {
+        getline(cin, organism);
+    }
+
+
+    void getfunction() {
+        getline(cin, function);
+    }
+
+
+    void protshow() {
+        cout << "\tName of the protein: " << name << endl;
+        cout << "\tNumber of AAs: " << length << endl;
+        cout << "\tSource of the protein: " << organism << endl;
+        cout << "\tFunction of the protein: " << function << endl;
+
+    }
+};
+
+int main()
+{
+    Protein prot1;
+    cout << "\nName = ";
+    prot1.getname();
+    cout << "\nLength = ";
+    prot1.getlength();
+    cout << "\nOrganism = ";
+    prot1.getorganism();
+    cout << "\nFunction = ";
+    prot1.getfunction();
+    cout << "\nDetails of your protein: \n";
+    prot1.protshow();
+
+    return 0;
+}
