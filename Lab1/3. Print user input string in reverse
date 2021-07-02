@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    string DNA;
+    cout << "Enter DNA sequence: ";
+    cin >> DNA;
+    cout << "Original order: " << DNA << "\n";
+    reverse(DNA.begin(), DNA.end());
+    cout << "Reverse order: " << DNA;
+
+    return 0;
+}
